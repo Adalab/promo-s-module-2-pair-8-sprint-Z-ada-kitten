@@ -39,9 +39,9 @@ const kittenOne = `<li class="card">
   <img
     class="card_img" src= ${kittenOneImage}
     alt="gatito"/>
-  <h3 class="card_title"> ${kittenOneName}</h3>
+  <h3 class="card_title"> ${kittenOneName.toUpperCase()}</h3>
   <h4 class="card_race"> ${kittenOneRace}</h4>
-  <p class="card_description"> ${kittenOneDesc} </p>         
+  <p class="card_description "> ${kittenOneDesc} </p>         
   </article>
 </li>`;
 
@@ -51,7 +51,7 @@ const kittenTwo = `<li class="card">
               src= ${kittenTwoImage}
               alt="sphynx-cat"
             />
-            <h3 class="card_title">${kittenTwoName}</h3>
+            <h3 class="card_title">${kittenTwoName.toUpperCase()}</h3>
             <h4 class="card_race">${kittenTwoRace}</h4>
             <p class="card_description"> ${kittenTwoDesc}              
             </p>
@@ -62,13 +62,18 @@ const kittenTwo = `<li class="card">
               src= ${kittenThreeImage}
               alt="maine-coon-cat"
             />
-            <h3 class="card_title">${kittenThreeName}</h3>
+            <h3 class="card_title">${kittenThreeName.toUpperCase()}</h3>
             <h4 class="card_race">${kittenThreeRace}</h4>
             <p class="card_description">${kittenThreeDesc}
             
             </p>
           </li>`;
+
+const input_search_desc = document.querySelector('.js_in_search_desc');
+
+const descrSearchText = input_search_desc.value;
         
+
 
 //vamos a traer a Anastasio y amigos de vuelta
 //primero de todo conectar js con HTML
@@ -83,4 +88,21 @@ const kittenOneDesc =
   ' Porte elegante, su patrón de color tan característico y sus ojos de un azul intenso, pero su historia se remonta a Asía al menos hace 500 años, donde tuvo su origen muy posiblemente.';
 const kittenOneRace = 'Siamés';*/
 //al declarar las const las subimos arroba para que se pudan relacionar con el contenido.
+
+
+if( kittenOneDesc.includes(descrSearchText) ) {
+ catList.innerHTML += kittenOne;
+
+  }
+  
+  if( kittenTwoDesc.includes(descrSearchText) ) {
+    catList.innerHTML += kittenTwo;
+  }
+  
+  if( kittenThreeDesc.includes(descrSearchText) ) {
+  //Completa el código
+  }
+  
+
+
 
