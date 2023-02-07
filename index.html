@@ -19,6 +19,7 @@
     <link rel="icon" href="./img/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/main.css" />
+
     <title>AdaKitten</title>
   </head>
   <body>
@@ -29,7 +30,7 @@
         <nav class="menu-nav">
           <ul class="menu">
             <li class="item">
-              <span class="fas fa-plus-circle"> </span>
+              <span class="fas fa-plus-circle js-plus"> </span>
             </li>
           </ul>
         </nav>
@@ -63,16 +64,20 @@
       <section class="search">
         <h2 class="title">Filtrar / Buscar</h2>
         <form class="form">
-          <input class="input" type="text" placeholder="Descripción" />
           <input
             class="input js_in_search_desc"
+            type="text"
+            placeholder="Descripción"
+          />
+          <input
+            class="input"
             type="select"
             name="raza"
             placeholder="Raza"
             id="raza"
           />
 
-          <button class="button">Buscar</button>
+          <button class="button js-button">Buscar</button>
         </form>
       </section>
 

@@ -51,7 +51,7 @@ La solución del ejercicio completo se subirá al final del módulo, si en una s
 
 #### 2.3 Condicionales:
 
-- [ ] 1. **FILTRAR:** Búsqueda por descripción.
+- [X] 1. **FILTRAR:** Búsqueda por descripción.
 - [ ] 2. **LISTADO - Bonus:**: ¿Y si no hay raza?.
 
 #### 2.4 Eventos:

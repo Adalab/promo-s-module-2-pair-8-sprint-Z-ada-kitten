@@ -71,9 +71,15 @@ const kittenTwo = `<li class="card">
 
 const input_search_desc = document.querySelector('.js_in_search_desc');
 
-const descrSearchText = input_search_desc.value;
-        
+const btnSearch= document.querySelector ('.js-button'); 
 
+let html = '';
+
+const newForm=document.querySelector ('.js-new-form');
+
+const  buttonPlus = document.querySelector(".js-plus");
+        
+// FIN CONSTANTES 
 
 //vamos a traer a Anastasio y amigos de vuelta
 //primero de todo conectar js con HTML
@@ -89,20 +95,46 @@ const kittenOneDesc =
 const kittenOneRace = 'Siamés';*/
 //al declarar las const las subimos arroba para que se pudan relacionar con el contenido.
 
+btnSearch.addEventListener ('click', (event) =>{
+
+  event.preventDefault();
+  const descrSearchText = input_search_desc.value;
 
 if( kittenOneDesc.includes(descrSearchText) ) {
- catList.innerHTML += kittenOne;
+ catList.innerHTML = kittenOne;
 
   }
   
   if( kittenTwoDesc.includes(descrSearchText) ) {
-    catList.innerHTML += kittenTwo;
+    catList.innerHTML = kittenTwo;
   }
   
   if( kittenThreeDesc.includes(descrSearchText) ) {
-  //Completa el código
+    catList.innerHTML = kittenThree;
   }
-  
+
+}); 
+
+// ¿Y si no hay raza?
 
 
+if (kittenOneRace === "") {
+  html = `Uy que despiste, no sabemos su raza`;
+} else {
+  html = kittenOneRace;
+}
+
+// Función para desplegar el colapsable 
+// Es una CLASE y por lo tanto no se pone el punto 
+
+
+buttonPlus.addEventListener('click', (event) => {
+
+  if (newForm.classList.contains('collapsed')) {
+    newForm.classList.remove('collapsed');
+  } else {
+    newForm.classList.add('collapsed');
+  }
+
+}); 
 
