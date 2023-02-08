@@ -138,3 +138,41 @@ buttonPlus.addEventListener('click', (event) => {
 
 }); 
 
+const inputDesc = document.querySelector('.js-input-desc');
+const inputPhoto = document.querySelector('.js-input-photo');
+const inputName = document.querySelector('.js-input-name');
+const labelMessageError = document.querySelector('.js-label-error');
+
+
+
+
+const addBtn= document.querySelector('.js-addBtn');
+const cancelBtn= document.querySelector('.js-cancelBtn'); 
+
+const handleClick = (event) => {
+  event.preventDefault (); 
+  //declaramos las constantes dentro de la función porque se ejecutan al hacer click - ES UN EVENTO QUE OCURRE AL HACER CLICK
+  const valueDesc = inputDesc.value;
+  const valuePhoto = inputPhoto.value;
+  const valueName = inputName.value;
+  if (valueDesc === '' || valuePhoto === '' || valueName === '') {
+    labelMessageError.innerHTML='¡Uy! parece que has olvidado algo';
+  } else {
+    labelMessageError.innerHTML=''; 
+    console.log('Holi');
+  }
+
+}
+
+const handleClickCancel=(event)=> {
+  
+  newForm.classList.add('collapsed');
+  labelMessageError.innerHTML='';
+ 
+
+}
+
+cancelBtn.addEventListener('click', handleClickCancel);
+addBtn.addEventListener('click', handleClick); 
+
+
