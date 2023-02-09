@@ -62,9 +62,9 @@ La solución del ejercicio completo se subirá al final del módulo, si en una s
 
 #### 2.5 Funciones I:
 
-- [ ] 1. **FORMULARIO:** Mostrar/ocultar el formulario.
-- [ ] 2. **FORMULARIO:** Adicionar nuevo gatito.
-- [ ] 3. **LISTADO:** Crear el gatito en HTML
+- [X] 1. **FORMULARIO:** Mostrar/ocultar el formulario.
+- [X] 2. **FORMULARIO:** Adicionar nuevo gatito.
+- [X] 3. **LISTADO:** Crear el gatito en HTML
 
 #### 2.6 Funciones II:
 

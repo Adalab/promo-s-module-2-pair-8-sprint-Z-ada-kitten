@@ -78,6 +78,10 @@ let html = '';
 const newForm=document.querySelector ('.js-new-form');
 
 const  buttonPlus = document.querySelector(".js-plus");
+
+const list=document.querySelector('.js-list'); 
+
+
         
 // FIN CONSTANTES 
 
@@ -128,7 +132,7 @@ if (kittenOneRace === "") {
 // Es una CLASE y por lo tanto no se pone el punto 
 
 
-buttonPlus.addEventListener('click', (event) => {
+/*buttonPlus.addEventListener('click', (event) => {
 
   if (newForm.classList.contains('collapsed')) {
     newForm.classList.remove('collapsed');
@@ -136,11 +140,52 @@ buttonPlus.addEventListener('click', (event) => {
     newForm.classList.add('collapsed');
   }
 
-}); 
+}); */
+
+// Funciones para abrir y cerrar el desplegable para añadir gatito: 
+
+// Crea dos funciones para mostrar u ocultar el formulario para añadir un nuevo gatito
+
+function showNewCatForm() {
+  newForm.classList.remove('collapsed');
+}
+function hideNewCatForm() {
+  newForm.classList.add('collapsed');
+}
+
+
+//Declaro la función manejadora y utilizo las funciones creadas anteriormente
+
+function handleClickNewCatForm(event) {
+  event.preventDefault();
+  if (newForm.classList.contains('collapsed')) {
+    showNewCatForm();
+  } else {
+    hideNewCatForm();
+  }
+}
+
+// Defino el evento que inicia la función manejadora
+
+buttonPlus.addEventListener('click', handleClickNewCatForm);
+
+
+/*function handleClickNewCatForm(event) {
+  event.preventDefault();
+  if (newFormElement.classList.contains('collapsed')) {
+    //completa el código
+  } else {
+    //completa el código
+  }
+}*/
+
+
+
 
 const inputDesc = document.querySelector('.js-input-desc');
 const inputPhoto = document.querySelector('.js-input-photo');
 const inputName = document.querySelector('.js-input-name');
+const inputRace = document.querySelector('.js-input-race');
 const labelMessageError = document.querySelector('.js-label-error');
 
 
@@ -155,11 +200,12 @@ const handleClick = (event) => {
   const valueDesc = inputDesc.value;
   const valuePhoto = inputPhoto.value;
   const valueName = inputName.value;
+  const valueRace = inputRace.value;
   if (valueDesc === '' || valuePhoto === '' || valueName === '') {
     labelMessageError.innerHTML='¡Uy! parece que has olvidado algo';
   } else {
     labelMessageError.innerHTML=''; 
-    console.log('Holi');
+    renderKitten(valuePhoto, valueDesc, valueName, valueRace)
   }
 
 }
@@ -174,5 +220,24 @@ const handleClickCancel=(event)=> {
 
 cancelBtn.addEventListener('click', handleClickCancel);
 addBtn.addEventListener('click', handleClick); 
+
+// 2. FORMULARIO: Adicionar nuevo gatito
+
+
+//modifica el evento para cumplir una función manejadora
+
+function renderKitten(url, desc, name, race) {
+ list.innerHTML+=`<li class="card">
+ <article>
+   <img
+     class="card_img" src= ${url}
+     alt="gatito"/>
+   <h3 class="card_title"> ${name.toUpperCase()}</h3>
+   <h4 class="card_race"> ${race}</h4>
+   <p class="card_description "> ${desc} </p>         
+   </article>
+ </li>`;
+}
+
 
 
