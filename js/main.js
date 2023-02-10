@@ -99,7 +99,8 @@ const kittenOneDesc =
 const kittenOneRace = 'Siamés';*/
 //al declarar las const las subimos arroba para que se pudan relacionar con el contenido.
 
-btnSearch.addEventListener ('click', (event) =>{
+//filtrar búsqueda por constantes (se comenta porque más abajo filtraremos búsqueda por función).
+/*btnSearch.addEventListener ('click', (event) =>{
 
   event.preventDefault();
   const descrSearchText = input_search_desc.value;
@@ -117,7 +118,7 @@ if( kittenOneDesc.includes(descrSearchText) ) {
     catList.innerHTML = kittenThree;
   }
 
-}); 
+}); */
 
 // ¿Y si no hay raza?
 
@@ -210,20 +211,10 @@ const handleClick = (event) => {
 
 }
 
-const handleClickCancel=(event)=> {
-  
-  newForm.classList.add('collapsed');
-  labelMessageError.innerHTML='';
- 
 
-}
-
-cancelBtn.addEventListener('click', handleClickCancel);
 addBtn.addEventListener('click', handleClick); 
 
 // 2. FORMULARIO: Adicionar nuevo gatito
-
-
 //modifica el evento para cumplir una función manejadora
 
 function renderKitten(url, desc, name, race) {
@@ -239,5 +230,40 @@ function renderKitten(url, desc, name, race) {
  </li>`;
 }
 
+//Haz una nueva función cancelNewKitten(event) asociada al evento clic del botón cancelar la creación de un nuevo gatito.
+
+const handleClickCancel=(event)=> {
+  cancelNewKitten ();
+ 
+}
+//anidamos una función dentro de otra y funciona igual
+const cancelNewKitten = (event) => {
+newForm.classList.add('collapsed');
+  labelMessageError.innerHTML='';
+};
+
+cancelBtn.addEventListener('click', handleClickCancel);
+
+//función para filtrar la selección
+//const descrSearchText = input_search_desc.value; debe estar dentro del evento para que funcione.
+
+function filterKitten (event) {
+  const descrSearchText = input_search_desc.value;
+  if( kittenOneDesc.includes(descrSearchText) ) {
+ catList.innerHTML = kittenOne;
+  }
+    if( kittenTwoDesc.includes(descrSearchText) ) {
+    catList.innerHTML = kittenTwo;
+  }
+    if( kittenThreeDesc.includes(descrSearchText) ) {
+    catList.innerHTML = kittenThree;
+  }
+} 
+btnSearch.addEventListener ('click', (event) =>{
+  event.preventDefault();
+  filterKitten ();
+});
+
+//"function filterKitten (event) {" es lo mismo que "const filterKitten = (event) => { "
 
 

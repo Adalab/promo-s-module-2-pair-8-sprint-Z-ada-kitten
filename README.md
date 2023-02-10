@@ -42,35 +42,35 @@ La solución del ejercicio completo se subirá al final del módulo, si en una s
 - [x] 2. Entiende el código html y css del proyecto
 - [x] 3. **FORMULARIO:** Mostrar
      formulario
-- [X] 4. **LISTADO:** Listado: Mostrar gatitos desde JS
+- [x] 4. **LISTADO:** Listado: Mostrar gatitos desde JS
 
 #### 2.2 Intro a la programación 2:
 
-- [X] 1. **LISTADO:** Mejora como se guarda la información
-- [X] 2. **LISTADO - Bonus:** Nombre de gatitos en mayúsculas
+- [x] 1. **LISTADO:** Mejora como se guarda la información
+- [x] 2. **LISTADO - Bonus:** Nombre de gatitos en mayúsculas
 
 #### 2.3 Condicionales:
 
-- [X] 1. **FILTRAR:** Búsqueda por descripción.
+- [x] 1. **FILTRAR:** Búsqueda por descripción.
 - [ ] 2. **LISTADO - Bonus:**: ¿Y si no hay raza?.
 
 #### 2.4 Eventos:
 
-- [X] 1. **FORMULARIO:** Mostrar/ocultar el formulario.
-- [X] 2. **FORMULARIO:** Adicionar nuevo gatito.
-- [X] 3. **FORMULARIO:** Cancelar formulario.
+- [x] 1. **FORMULARIO:** Mostrar/ocultar el formulario.
+- [x] 2. **FORMULARIO:** Adicionar nuevo gatito.
+- [x] 3. **FORMULARIO:** Cancelar formulario.
 
 #### 2.5 Funciones I:
 
-- [X] 1. **FORMULARIO:** Mostrar/ocultar el formulario.
-- [X] 2. **FORMULARIO:** Adicionar nuevo gatito.
-- [X] 3. **LISTADO:** Crear el gatito en HTML
+- [x] 1. **FORMULARIO:** Mostrar/ocultar el formulario.
+- [x] 2. **FORMULARIO:** Adicionar nuevo gatito.
+- [x] 3. **LISTADO:** Crear el gatito en HTML
 
 #### 2.6 Funciones II:
 
-- [ ] 1. **FORMULARIO:** Cancelar formulario.
-- [ ] 2. **FILTRAR:** Filtrar por descripción.
-- [ ] 3. **LISTADO - Bonus:**: ¿Y si no hay raza?.
+- [x] 1. **FORMULARIO:** Cancelar formulario.
+- [x] 2. **FILTRAR:** Filtrar por descripción.
+- [x] 3. **LISTADO - Bonus:**: ¿Y si no hay raza?.
 - [ ] 4. **BONUS:** Funciones dentro de funciones.
 
 #### 2.7 Objetos
